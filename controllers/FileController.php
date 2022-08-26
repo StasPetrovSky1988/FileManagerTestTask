@@ -77,6 +77,7 @@ class FileController extends Controller
     public function actionDownload($id)
     {
         $file = File::findModel($id);
+        if ($file->id_user != Yii::$app->user->id) throw new NotFoundHttpException('Access error');
         return $file->download();
     }
 

@@ -164,7 +164,6 @@ class File extends \yii\db\ActiveRecord
     //Download file
     public function download()
     {
-        if ($this->id_user != Yii::$app->user->id) throw new NotFoundHttpException('Access error');
         return Yii::$app->response->sendFile(self::getHardPath());
     }
 
