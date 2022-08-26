@@ -3,7 +3,7 @@
 This project I was develop as test task and it took me 2 full days for it, that's why please don't judge strictly because i had so little time for it and if I should develop a real project I would have do it differently for many things.
 [Here is the task](https://docs.google.com/document/d/1L3s_yBBzw4GbBxsvvFiynj9lJx8ONUOsPcxr5WzzrdI/edit)
 
-[Demo](https://docs.google.com/document/d/1L3s_yBBzw4GbBxsvvFiynj9lJx8ONUOsPcxr5WzzrdI/edit)
+[Demo](https://filemanager.yuzhny.in)
 
 <h3>INSTALL</h2>
 
@@ -13,7 +13,7 @@ This project I was develop as test task and it took me 2 full days for it, that'
 
 `yii migrate`
 
-<h3>REQUIRES</h2>
+<h3>DEPENDENCIES</h2>
 
 `PHP 8.0 +` `MySQL` `Git` `Composer`
 

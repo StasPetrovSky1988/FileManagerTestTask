@@ -99,9 +99,4 @@ class FileController extends Controller
         if (($model = File::findOne($id)) !== null) return $model;
         throw new NotFoundHttpException('Item not found');
     }
-
-
-
-
-
 }
