@@ -12,6 +12,12 @@ class m220822_194519_users extends Migration
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
+        }
+
         if (Yii::$app->db->schema->getTableSchema('users') !== null) $this->dropTable('users');
 
         $this->createTable('users',array(
@@ -28,7 +34,7 @@ class m220822_194519_users extends Migration
             'email' => $this->string()->notNull()->unique(),
             'access_level' => $this->smallInteger()->notNull()->defaultValue(0), //Уровень доступа
             'verification_token' => $this->string()->defaultValue(null),
-        ));
+        ), $tableOptions);
 
         $this->insert('users', [
             'username' => 'Станислав Петров',
