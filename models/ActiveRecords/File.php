@@ -195,11 +195,6 @@ class File extends \yii\db\ActiveRecord
 
                 $uniqueName = mb_strimwidth($name, 0,$nameLength - $сutLength);
                 $uniqueName .= '(' . ++$i . ')';
-                echo '$name - ' . $name;
-                echo '$nameLength - ' . $nameLength;
-                echo '$сutLength - ' . $сutLength;
-                echo '$i - (' . $i . ')';
-                echo '<hr>';
 
                 return self::getUniqueName($uniqueName, $idParent, $type, $i);
             }
